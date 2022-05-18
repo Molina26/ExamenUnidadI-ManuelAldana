@@ -30,8 +30,17 @@ class ProgramingCourse(id: Int,
     }
 
     fun deleteCourse (id: Int) : String {
+        var delted: Boolean = false
+        var objCourse: ProgramingCourse
 
-        return ""
+        for (i in 0 until this.courses.size){
+            if (this.courses.get(i).id == id){
+                objCourse = this.courses.get(i)
+                this.courses.remove(objCourse)
+                delted = true
+            }
+        }
+        return if (delted) Course.SUCCESS_REGISTER else Course.ERROR
     }
 
     fun updateCourse (course : ProgramingCourse) : String {
