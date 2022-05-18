@@ -23,7 +23,12 @@ class ProgramingCourse(id: Int = 0,
     }
 
     fun addCourse (course: ProgramingCourse) : String {
-        var obj = this.courses.last()
+        var obj: ProgramingCourse = ProgramingCourse()
+        if(this.courses.isEmpty()){
+            course.id = 1
+        }else{
+            obj = this.courses.last()
+        }
         return if (course.name.length > 0 && course.description.length > 0) {
             course.id = obj.id+1;
             this.courses.add(course)
