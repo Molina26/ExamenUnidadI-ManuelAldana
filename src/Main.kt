@@ -22,19 +22,87 @@ fun main(args: Array<String>) {
             1 -> {
 
                 println("Welcome to Cooking courses, please select an option by entering the corresponding number: " +
-                        "\n1.- Add course")
+                        "\n1.- Add course" +
+                        "\n2.- Update course" +
+                        "\n3.- Delete course" +
+                        "\n4.- Get course" +
+                        "\n5.- Return to menu principal")
+                menuOption = sc.nextInt()
+                do{
+                    when(menuOption){
+                        1 -> {
+                            // ADD
+
+                        }
+                        2 -> {
+                            // UPDATE
+
+                        }
+                        3 -> {
+                            //DELETE
+
+                        }
+                        4 -> {
+                            //GET
+
+                        }
+                        5 -> {
+                            // RETURN
+
+                        }
+                        else -> {
+
+                        }
+                    }
+                }while(menuOption == 5)
+
 
             }
             2 -> {
+                println("Welcome to Programing courses, please select an option by entering the corresponding number: " +
+                        "\n1.- Add course" +
+                        "\n2.- Update course" +
+                        "\n3.- Delete course" +
+                        "\n4.- Get course" +
+                        "\n5.- Return to menu principal")
+                menuOption = sc.nextInt()
+                do{
+                    when(menuOption){
+                        1 -> {
+                            // ADD
 
+                        }
+                        2 -> {
+                            // UPDATE
+
+                        }
+                        3 -> {
+                            //DELETE
+
+                        }
+                        4 -> {
+                            //GET
+
+                        }
+                        5 -> {
+                            // RETURN
+
+                        }
+                        else -> {
+
+                        }
+                    }
+                }while(menuOption == 5)
             }
             3 -> {
+                //GET ALL
 
             }
             4 -> {
-                println(" USTED ESTA A PUNTO DE SALIR DEL SISTEMA 🔚")
+                //OUT
+                println(" YOU ARE EXITING THE SYSTEM 🔚")
             }
-            else -> println("Si no ingresa un número de los indicados, permanecera aquí infinitamente")
+            else -> println("If you don't enter a valid number, you will be here infinitely")
         }
 
     }while(courseType == 4)
