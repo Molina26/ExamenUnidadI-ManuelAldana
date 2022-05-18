@@ -4,7 +4,9 @@ fun main(args: Array<String>) {
 
     var courseType : Int = 4
     var menuOption : Int = 5
-    var sc = Scanner(System.`in`)
+    val scan = Scanner(System.`in`)
+
+    val programmingCourse: ProgramingCourse =  ProgramingCourse()
 
     println("🚧🚧🚧🚧🚧🚧 Bienvenido al sistema de cursos 🚧🚧🚧🚧🚧🚧")
     println("\nIn the next program you will can read and management Cooking and Programing courses, wich you are " +
@@ -16,7 +18,7 @@ fun main(args: Array<String>) {
                 "\n2.- PROGRAMING COURSES 💻🖥📱🖱🖨📈" +
                 "\n3.- GET ALL ✅🔄" +
                 "\n4.- GO OUT OF THE SYSTEM ✈🚸🔚")
-        courseType = sc.nextInt()
+        courseType = scan.nextInt()
 
         when(courseType){
             1 -> {
@@ -27,11 +29,15 @@ fun main(args: Array<String>) {
                         "\n3.- Delete course" +
                         "\n4.- Get course" +
                         "\n5.- Return to menu principal")
-                menuOption = sc.nextInt()
+                menuOption = scan.nextInt()
                 do{
                     when(menuOption){
                         1 -> {
                             // ADD
+                            val programingCourseTemporal = ProgramingCourse()
+
+
+                            programmingCourse.addCourse(programmingCourse)
 
                         }
                         2 -> {
@@ -65,7 +71,7 @@ fun main(args: Array<String>) {
                         "\n3.- Delete course" +
                         "\n4.- Get course" +
                         "\n5.- Return to menu principal")
-                menuOption = sc.nextInt()
+                menuOption = scan.nextInt()
                 do{
                     when(menuOption){
                         1 -> {

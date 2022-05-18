@@ -1,8 +1,8 @@
-class ProgramingCourse(id: Int,
-                       name: String,
-                       description: String,
-                       var matchPrograming: String,
-                       var developArea: String,
+class ProgramingCourse(id: Int = 0,
+                       name: String = "",
+                       description: String = "",
+                       var matchPrograming: String = "",
+                       var developArea: String = "",
                        ) : Course(id, name, description){
 
     val courses = mutableListOf<ProgramingCourse>()
