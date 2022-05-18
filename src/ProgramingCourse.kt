@@ -18,6 +18,10 @@ class ProgramingCourse(id: Int = 0,
         return this.courses
     }
 
+    fun getCourseById(id: Int): ProgramingCourse? {
+        return this.courses.find { programingCourse -> programingCourse.id == id }
+    }
+
     fun addCourse (course: ProgramingCourse) : String {
         var obj = this.courses.last()
         return if (course.name.length > 0 && course.description.length > 0) {
